@@ -28,14 +28,16 @@
     </section>
 
     <section id="about" class="about-bg">
-        <h2 class="section-title">關於我</h2>
+        <h2 class="section-title">關於我們</h2>
         <div class="about-content">
             <img src="images/photo.png" alt="房仲專業照" class="about-img">
             <div class="about-text">
-                <h3>馬育家 </h3>
-                <p>您好！我是[您的姓名]，深耕房地產市場多年。我深知買賣房屋是人生中的大事，因此我始終秉持著「把客戶的家當作自己的家」的初衷，為您把關每一個交易細節。</p>
+                <h3>24H好時居不動產｜馬育家 </h3>
+                <p>我是育家，致力於為每一位客戶找到心目中的理想家園。房地產不只是冷冰冰的買賣，更是承載一家人幸福的基石。我堅持以「誠信、專業、透明」的服務精神，陪伴您走過成家的每一哩路，讓買屋賣屋成為您人生中最安心的決定</p>
                 <br>
-                <p>無論您是首購、換屋，或是資產配置，我都能提供精準的市場分析與客製化建議。期待有機會為您服務！</p>
+                <p>買賣不應受限於時間。我的後援團隊——住商不動產「土城重劃日月光加盟店」，是全台灣唯一提供 24 小時全年無休服務的實體門市。</p>
+                <br>
+                <p>當別家房仲熄燈時，我們依然在線。這不僅代表了我們對服務的極致追求，更意味著您的物件能獲得全天候的行銷曝光，您的急切需求隨時都能得到回應。</p>
             </div>
         </div>
     </section>
@@ -85,7 +87,7 @@
             </div>
 
             <div class="view-all-container">
-                <a href="https://realtor.houseprice.tw/agent/buy/0931411119/" target="_blank" class="view-all-btn">查看所有待售物件</a>
+                <a href="https://www.ibigfun.com/pages/index/0931411119" target="_blank" class="view-all-btn">查看所有待售物件</a>
             </div>
             
         </div>
@@ -94,27 +96,64 @@
     <section id="contact" class="about-bg">
         <h2 class="section-title">與我聯絡</h2>
         <div class="contact-container">
-            <form id="contactForm">
-                <div class="form-group">
-                    <label for="name">您的姓名</label>
-                    <input type="text" id="name" class="form-control" placeholder="請輸入姓名" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">聯絡電話</label>
-                    <input type="tel" id="phone" class="form-control" placeholder="請輸入手機號碼" required>
-                </div>
-                <div class="form-group">
-                    <label for="needs">購屋/售屋需求</label>
-                    <textarea id="needs" class="form-control" placeholder="請簡述您的需求（例如：想找三房含車位、預算約1500萬...）"></textarea>
-                </div>
-                <button type="submit" class="submit-btn">送出留言</button>
+            <form id="contactForm" action="https://formspree.io/f/myknwgzz" method="POST">
+    <div class="form-group">
+        <label for="name">您的姓名</label>
+        <input type="text" id="name" name="姓名" class="form-control" placeholder="請輸入姓名" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="phone">聯絡電話</label>
+        <input type="tel" id="phone" name="電話" class="form-control" placeholder="請輸入手機號碼" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="needs">購屋/售屋需求</label>
+        <textarea id="needs" name="需求內容" class="form-control" placeholder="請簡述您的需求（例如：想找三房含車位、預算約1500萬...）"></textarea>
+    </div>
+    
+    <input type="hidden" name="_next" value="https://yujia0430.github.io/yjhouse/thanks.html">
+    
+    <button type="submit" class="submit-btn">送出留言</button>
             </form>
+            <div class="direct-contact">
+    <p class="contact-hint">或透過以下方式直接聯繫馬育家：</p>
+    <div class="contact-btn-group">
+        <a href="tel:0931411119" class="btn-item phone">
+            <i class="fas fa-phone-alt"></i>☎️：0931-411-119
+        </a>
+        
+        <a href="https://line.me/ti/p/RnR4vv2ODy" target="_blank" class="btn-item line">
+            <i class="fab fa-line"></i>點我加 LINE 諮詢
+        </a>
+    </div>
+</div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026 [您的姓名] 專業房地產顧問. All Rights Reserved.</p>
-    </footer>
+
+<a href="https://line.me/ti/p/您的LINEID" class="floating-line" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" alt="LINE">
+    <span>立即諮詢</span>
+</a>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <p class="company-name">
+            <strong>住商不動產 土城重劃日月光加盟店</strong> | 好時居房地產股份有限公司
+        </p>
+        
+        <p class="agent-info">
+            經紀人：黃耕鴻 (112) 北市經證字第02764號
+        </p>
+        
+        <hr class="footer-divider">
+        
+        <p class="copyright">
+            © 2026 馬育家. All Rights Reserved.
+        </p>
+    </div>
+</footer>
 
     <script src="script.js" defer></script>
 </body>

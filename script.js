@@ -120,20 +120,6 @@ if (phoneInput) {
 }
 
 // ==========================================
-// 4. 聯絡表單送出模擬功能
-// ==========================================
-const contactForm = document.getElementById("contactForm");
-
-if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-        e.preventDefault(); 
-        const name = document.getElementById("name").value;
-        alert("謝謝您，" + name + "！您的留言已送出，我會盡快與您聯繫。");
-        contactForm.reset();
-    });
-}
-
-// ==========================================
 // 5. 精選物件自動輪播功能 (每隔幾秒跳一張)
 // ==========================================
 if (propertiesWrapper) {
