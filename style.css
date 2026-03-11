@@ -34,7 +34,7 @@ a { text-decoration: none; color: inherit; }
     transition: var(--transition);
 }
 
-.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+.logo { font-size: 1.5rem; font-weight: 700; color: #063; }
 .logo span { color: var(--secondary-color); }
 
 .nav-links { display: flex; list-style: none; gap: 2rem; }

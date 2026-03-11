@@ -3,44 +3,52 @@
 // ==========================================
 const propertiesData = [
     {
-        image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: "1,280 萬",
-        title: "捷運永寧站 | 中央路高樓層美妝",
-        layout: "3房 2廳 2衛",
-        size: "35.5 坪",
-        feature: "含車位"
+        image: "images/吳興街.jpg",
+        price: "1,320 萬",
+        title: "信義區 | 低總價公寓二樓",
+        layout: "3房 1廳 1衛",
+        size: "17.7 坪",
+        feature: "無車位"
     },
     {
-        image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: "1,560 萬",
-        title: "家樂福商圈 | 質感採光大兩房",
+        image: "images/樂沐.jpg",
+        price: "2,128 萬",
+        title: "聖峰樂沐 | 全新裝潢兩房車",
         layout: "2房 2廳 1衛",
-        size: "28.2 坪",
-        feature: "含平車"
+        size: "38.97 坪",
+        feature: "全新裝潢"
     },
     {
-        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: "2,980 萬",
-        title: "裕民路熱鬧商圈 | 黃金收租店面",
-        layout: "開放格局",
-        size: "40.1 坪",
-        feature: "人潮錢潮"
+        image: "images/弘暉.jpg",
+        price: "1,998 萬",
+        title: "弘暉大苑 | 頂樓景觀兩房",
+        layout: "2房 1廳 1衛",
+        size: "34.49 坪",
+        feature: "景觀房"
     },
     {
-        image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: "3,150 萬",
-        title: "信義區吳興街 | 靜巷優質採光宅",
+        image: "images/日月光.jpg",
+        price: "4,880 萬",
+        title: "日月光 | 三房雙車位露臺戶",
         layout: "3房 2廳 2衛",
-        size: "32.0 坪",
-        feature: "近捷運"
-    },
-    {
-        image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-        price: "1,880 萬",
-        title: "文化廣場大樓 | 高樓景觀戶",
-        layout: "3房 2廳 2衛",
-        size: "38.5 坪",
+        size: "67.26 坪",
         feature: "公設齊全"
+    },
+    {
+        image: "images/樂郡.jpg",
+        price: "2,358 萬",
+        title: "樂郡晴居 | 邊間三房",
+        layout: "3房 2廳 2衛",
+        size: "45.05 坪",
+        feature: "稀有邊間"
+    },
+    {
+        image: "images/中央大道.jpg",
+        price: "1,980 萬",
+        title: "中央大道 | 漂亮三房車",
+        layout: "3房 2廳 2衛",
+        size: "47.90 坪",
+        feature: "價格實惠"
     },
     
 ];
