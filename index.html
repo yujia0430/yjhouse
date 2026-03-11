@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[您的姓名] | 專業房地產顧問</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">您的<span>品牌名稱</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">首頁</a></li>
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#properties">精選好屋</a></li>
+            <li><a href="#more-cases">更多案件</a></li>
+            <li><a href="#contact">預約看屋</a></li>
+        </ul>
+        <div class="hamburger">☰</div>
+    </nav>
+
+    <section id="home" class="hero">
+        <h1>為您尋找理想中的避風港</h1>
+        <p>專業、誠信、用心，提供最透明的房地產買賣服務。讓成家的夢想，從這裡開始。</p>
+        <a href="#contact"><button class="cta-btn">立即免費諮詢</button></a>
+    </section>
+
+    <section id="about" class="about-bg">
+        <h2 class="section-title">關於我</h2>
+        <div class="about-content">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="房仲專業照" class="about-img">
+            <div class="about-text">
+                <h3>[您的姓名] | [您的職稱]</h3>
+                <p>您好！我是[您的姓名]，深耕房地產市場多年。我深知買賣房屋是人生中的大事，因此我始終秉持著「把客戶的家當作自己的家」的初衷，為您把關每一個交易細節。</p>
+                <br>
+                <p>無論您是首購、換屋，或是資產配置，我都能提供精準的市場分析與客製化建議。期待有機會為您服務！</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="properties">
+        <h2 class="section-title">精選好屋推薦</h2>
+        <div class="properties-wrapper" id="properties-wrapper">
+            
+        </div>
+    </section>
+
+    <section id="more-cases">
+        <h2 class="section-title">更多案件</h2>
+        <div class="cases-container">
+            
+            <div class="case-item">
+                <div class="case-text">
+                    <h4 class="case-title">[行政區] 高樓層景觀大四房</h4>
+                    <p class="case-desc">4房 2廳 2衛 | 55.3 坪 | 含雙車位</p>
+                </div>
+                <div class="case-action">
+                    <span class="case-price">3,200 萬</span>
+                    <a href="#contact" class="case-btn">預約賞屋</a>
+                </div>
+            </div>
+
+            <div class="case-item">
+                <div class="case-text">
+                    <h4 class="case-title">[商圈名] 靜巷通風好採光</h4>
+                    <p class="case-desc">3房 2廳 1衛 | 30.1 坪 | 低公設</p>
+                </div>
+                <div class="case-action">
+                    <span class="case-price">1,450 萬</span>
+                    <a href="#contact" class="case-btn">預約賞屋</a>
+                </div>
+            </div>
+
+            <div class="case-item">
+                <div class="case-text">
+                    <h4 class="case-title">[捷運站] 走路五分鐘溫馨小宅</h4>
+                    <p class="case-desc">1房 1廳 1衛 | 15.2 坪 | 適合單身/頂客</p>
+                </div>
+                <div class="case-action">
+                    <span class="case-price">780 萬</span>
+                    <a href="#contact" class="case-btn">預約賞屋</a>
+                </div>
+            </div>
+
+            <div class="view-all-container">
+                <a href="https://realtor.houseprice.tw/agent/buy/0931411119/" target="_blank" class="view-all-btn">查看所有待售物件</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="contact" class="about-bg">
+        <h2 class="section-title">與我聯絡</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">您的姓名</label>
+                    <input type="text" id="name" class="form-control" placeholder="請輸入姓名" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">聯絡電話</label>
+                    <input type="tel" id="phone" class="form-control" placeholder="請輸入手機號碼" required>
+                </div>
+                <div class="form-group">
+                    <label for="needs">購屋/售屋需求</label>
+                    <textarea id="needs" class="form-control" placeholder="請簡述您的需求（例如：想找三房含車位、預算約1500萬...）"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">送出留言</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 [您的姓名] 專業房地產顧問. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

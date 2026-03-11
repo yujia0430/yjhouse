@@ -1,0 +1,217 @@
+/* CSS 變數設定 */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #d4af37;
+    --bg-light: #f8f9fa;
+    --text-main: #333333;
+    --text-muted: #666666;
+    --transition: all 0.3s ease;
+}
+
+/* 基礎重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { color: var(--text-main); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+
+/* 導覽列 */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    transition: var(--transition);
+}
+
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary-color); }
+.logo span { color: var(--secondary-color); }
+
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { font-weight: 500; transition: var(--transition); }
+.nav-links a:hover { color: var(--secondary-color); }
+
+.hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: var(--primary-color); }
+
+/* 主視覺區塊 */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), 
+                url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+    color: #ffffff; padding: 0 20px; margin-top: 60px;
+}
+
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+.hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+
+.cta-btn {
+    padding: 12px 30px; background-color: var(--secondary-color); color: #fff;
+    border: none; border-radius: 30px; font-size: 1.1rem; font-weight: 700; cursor: pointer;
+    transition: var(--transition); box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+.cta-btn:hover { background-color: #b5952f; transform: translateY(-2px); }
+
+/* 共通區塊設定 */
+.section-title {
+    text-align: center; font-size: 2.2rem; color: var(--primary-color);
+    margin-bottom: 3rem; position: relative;
+}
+.section-title::after {
+    content: ''; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%);
+    width: 60px; height: 3px; background-color: var(--secondary-color);
+}
+section { padding: 5rem 5%; }
+
+/* 關於我 */
+.about-bg { background-color: var(--bg-light); }
+.about-content { display: flex; align-items: center; justify-content: center; gap: 4rem; max-width: 1000px; margin: 0 auto; }
+.about-img { width: 300px; height: 300px; border-radius: 50%; object-fit: cover; border: 5px solid #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.about-text { flex: 1; }
+.about-text h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--primary-color); }
+
+/* 讓整個精選物件的父區塊置中 */
+#properties {
+    text-align: center;
+}
+
+/* 精選物件區塊 (少時置中，多時左右捲軸) */
+.properties-wrapper {
+    display: inline-flex; /* 魔法關鍵：改成 inline-flex */
+    text-align: left; /* 讓卡片裡的文字維持原本的靠左對齊 */
+    max-width: 100%; /* 限制最大寬度，超出螢幕時才會觸發捲軸 */
+    gap: 20px;
+    overflow-x: auto; /* 開啟左右滑動 */
+    padding: 10px 5px 30px 5px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* 讓手機滑動更順暢 */
+    scroll-snap-type: x mandatory; /* 滑動時自動對齊卡片 */
+}
+/* 自訂捲軸樣式，讓它看起來更有質感 */
+.properties-wrapper::-webkit-scrollbar {
+    height: 8px;
+}
+.properties-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+.properties-wrapper::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 4px;
+}
+
+.property-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: var(--transition);
+    flex: 0 0 320px; /* 固定卡片寬度，不會被擠壓 */
+    scroll-snap-align: start; /* 對齊點 */
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.property-img {
+    width: 100%;
+    aspect-ratio: 1/1; /* 嚴格保持 1:1 比例 */
+    object-fit: cover;
+}
+
+.property-info {
+    padding: 1.5rem;
+}
+
+.property-price {
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.property-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    white-space: nowrap; /* 標題太長時不換行 */
+    overflow: hidden;
+    text-overflow: ellipsis; /* 變成刪節號... */
+}
+
+.property-details {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+/* 更多案件區塊 */
+.cases-container { max-width: 900px; margin: 0 auto; }
+.case-item {
+    display: flex; justify-content: space-between; align-items: center; background: #fff;
+    padding: 1.5rem 2rem; margin-bottom: 1rem; border-radius: 8px; border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05); transition: var(--transition);
+}
+.case-item:hover { transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.case-title { font-size: 1.2rem; color: var(--primary-color); margin-bottom: 0.3rem; }
+.case-desc { color: var(--text-muted); font-size: 0.95rem; }
+.case-action { display: flex; align-items: center; gap: 1.5rem; }
+.case-price { font-size: 1.3rem; font-weight: 700; color: var(--secondary-color); }
+.case-btn {
+    padding: 8px 16px; background-color: transparent; border: 1px solid var(--primary-color);
+    color: var(--primary-color); border-radius: 20px; font-size: 0.9rem; font-weight: bold; transition: var(--transition);
+}
+.case-btn:hover { background-color: var(--primary-color); color: #fff; }
+.view-all-container { text-align: center; margin-top: 3rem; }
+.view-all-btn {
+    display: inline-block; padding: 12px 30px; background-color: var(--primary-color); color: #fff;
+    border-radius: 5px; font-weight: bold; font-size: 1.1rem; transition: var(--transition);
+}
+.view-all-btn:hover { background-color: #1a252f; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+
+/* 聯絡表單區塊 */
+.contact-container { max-width: 800px; margin: 0 auto; background: #fff; padding: 3rem; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.05); }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+.form-control { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 1rem; transition: var(--transition); }
+.form-control:focus { outline: none; border-color: var(--secondary-color); box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.2); }
+textarea.form-control { resize: vertical; height: 120px; }
+.submit-btn {
+    width: 100%; padding: 15px; background-color: var(--primary-color); color: #fff; border: none;
+    border-radius: 5px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: var(--transition);
+}
+.submit-btn:hover { background-color: #1a252f; }
+
+/* 頁尾 */
+footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 2rem; }
+
+/* 響應式設計 (手機版) */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute; top: 100%; left: -100%; width: 100%; background-color: #fff;
+        flex-direction: column; text-align: center; gap: 0; box-shadow: 0 5px 10px rgba(0,0,0,0.1); transition: var(--transition);
+    }
+    .nav-links.active { left: 0; }
+    .nav-links li { padding: 1rem 0; border-bottom: 1px solid #eee; }
+    .hamburger { display: block; }
+    .about-content { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 2.2rem; }
+    
+    /* 更多案件手機版微調 */
+    .case-item { flex-direction: column; align-items: flex-start; gap: 1rem; padding: 1rem; }
+    .case-action { width: 100%; justify-content: space-between; border-top: 1px solid #eee; padding-top: 1rem; }
+}
